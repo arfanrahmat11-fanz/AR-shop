@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f0d09;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0d09;
+  color: aliceblue;
+  font-family: 'Franklin', sans-serif;
+  /* foto profil */
+  .profil-card {
+    background-color: #23b7dc;
+    text-align: center;
+    font-family: arial;
+  }
+  .profil-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transition: 0.3s infinite;
+  }
+  .profil-card h3 {
+    margin: 10px 0 5px;
+  }
+  .profil-card p {
+    color:rgb(20, 240, 68);
+    font-size: 14px;
+  }
+  .profil-card img :hover{
+    transform:rotateY('angle')(1.1);
+    
+  }
+}
+/* navbar */
+.navbar {
+  background-color: #12141bd2;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 3s infinite;
+
+}
+.navbar a:hover{
+  color: yellow;
+}
+/* animasi h1 */
+h1 > span {
+position: relative;
+display: inline-block;
+color: orangered;
+height: 1.25em;
+vertical-align:bottom;
+overflow: hidden;
+}
+h1 > span > span {
+  display: block;
+  animation: gerak 5s infinite ease;
+}
+@keyframes gerak {
+  0%{transform: translateY(0);}
+    25%{transform: translateY(-100%);}
+      50%{transform: translateY(-200%);}
+        75%{transform: translateY(-300%);}
+          100%{transform: translateY(-400%);}
+}
+/* Header */
+header {
+  background: #23b7dc;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart {
+  cursor: pointer;
+  border: #218838;
+  
+}
+
+/* Produk */
+.container {
+    width: 100%;
+    max-width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  transition: 1s line;
+  
+}
+.container :hover{
+    transform: scale(1.10);
+}
+
+.product {
+  color: aliceblue;
+  
+  background: rgba(32, 14, 22, 0.521);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(20, 204, 228, 0.95);
+  text-align: center;
+  transition: 3s ;
+}
+
+.product img {
+  width: 70%;
+  border-radius: 10px;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product p {
+  color: green;
+  font-weight: bold;
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background: #218838;
+}
+
+/* Keranjang */
+.cart-box {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(16, 139, 216, 0.877);
+  padding: 20px;
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+
+.cart-box.active {
+  transform: translateX(0);
+}
+
+.cart-item {
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

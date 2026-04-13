@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="profil-card">
+    <img src="myprofil.jpg">
+    <h3>Arfan Irsani Rahmat</h3>
+    <p>member</p>
+
+
+  </div>
+<div id="navbar"></div>
+<header>
+  <h1>arfan shop
+    <span>
+      <span>👖</span>
+       <span>👕</span>
+        <span>👟</span>
+         <span>🩱</span>
+    </span>
+    
+  </h1>
+ <div class="cart" onclick="toggleCart()">🛒 Keranjang (<span id="count">0</span>)</div>
+</header>
+<div  class="container" id="product-list"></div>
+
+<div class="cart-box" id="cartBox">
+  <button class="close-btn" onclick="toggleCart()">X</button>
+  <h2>Keranjang</h2>
+  <div id="cart-items"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
